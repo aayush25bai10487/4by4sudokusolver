@@ -9,15 +9,15 @@ Install Java JDK on your computer.
 
 To check if Java is installed, open the terminal and use:
 
-'''
+```bash
 java -version
-'''
+```
 
 To check if the Java compiler is installed:
 
-'''
+```bash
 javac -version
-'''
+```
 
 No external Java libraries are required for this project.
 
@@ -29,15 +29,15 @@ First, open the terminal inside the project folder.
 
 Compile all the Java files:
 
-'''
+```bash
 javac src/*.java
-'''
+```
 
 Run the program:
 
-'''
+```bash
 java -cp src Main
-'''
+```
 
 The program asks the user to enter 4 rows with 4 numbers in each row.
 Use `0` for an empty cell.
@@ -46,7 +46,7 @@ Use `0` for an empty cell.
 
 The input entered in the terminal is:
 
-'''
+```text
 =================================
        4x4 SUDOKU SOLVER
 =================================
@@ -57,13 +57,13 @@ Enter row 1: 0 3 0 4
 Enter row 2: 0 1 0 2
 Enter row 3: 3 0 2 1
 Enter row 4: 1 2 4 3
-'''
+```
 
 ### Output
 
 After entering the puzzle, the program displays:
 
-'''
+```text
 Original Sudoku:
 +---+---+
 0 3 | 0 4 |
@@ -81,24 +81,24 @@ Solved Sudoku:
 3 4 | 2 1 |
 1 2 | 4 3 |
 +---+---+
-'''
+```
 
 ### Terminal Commands
 
 The complete sequence of commands is:
 
-'''
+```bash
 cd path/to/4x4-sudoku-solver-java
 javac src/*.java
 java -cp src Main
-'''
+```
 
 If the terminal is already opened inside the project folder, only these two commands are needed:
 
-'''
+```bash
 javac src/*.java
 java -cp src Main
-'''
+```
 
 ### Input and Output Screenshots
 
@@ -144,7 +144,7 @@ java -cp src Main
 
 ## Project Structure
 
-'''
+```text
 src/
 ├── Main.java
 ├── SudokuBoard.java
@@ -162,12 +162,5 @@ screenshots/
 
 README.md
 statement.md
-'''
-
-
-3. Check whether the number is safe.
-4. Place the number if valid.
-5. Recursively solve the remaining cells.
-6. If the choice leads to failure, remove it and try another number.
-7. Continue until the puzzle is solved or no solution exists.
+```
 
