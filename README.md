@@ -1,61 +1,170 @@
 # 4by4sudokusolver
-A Simple 4x4 Sudoku Solver in Java
+A simple 4x4 Sudoku Solver made in Java.
 
-## Project Overview
-A simple console-based 4x4 Sudoku Solver developed using Java.
-The program accepts a partially completed Sudoku puzzle, validates
-the given values, and solves the puzzle using the backtracking
-algorithm.
 
-## Features
-- 4x4 Sudoku board
-- User input using Scanner
-- Input validation
-- Row, column, and 2x2 box validation
-- Backtracking-based Sudoku solving
-- Exception handling for invalid input
-- Modular Java class structure
 
-## Technologies
-- Java
-- Object-Oriented Programming
-- Arrays
-- Recursion
-- Exception Handling
+## Installation
 
-## Project Structure
-src/
-- Main.java
-- SudokuBoard.java
-- InputHandler.java
-- SudokuValidator.java
-- SudokuSolver.java
-- SudokuException.java
+Install Java JDK on your computer.
 
-## How to Run
+To check if Java is installed, open the terminal and use:
 
-Open a terminal inside the project folder.
+'''
+java -version
+'''
 
-Compile:
+To check if the Java compiler is installed:
+
+'''
+javac -version
+'''
+
+No external Java libraries are required for this project.
+
+
+
+## Usage/Examples
+
+First, open the terminal inside the project folder.
+
+Compile all the Java files:
+
+'''
 javac src/*.java
+'''
 
-Run:
+Run the program:
+
+'''
 java -cp src Main
+'''
 
-## Input
-Enter four rows. Each row must contain four integers.
+The program asks the user to enter 4 rows with 4 numbers in each row.
+Use `0` for an empty cell.
+
+### Input
+
+The input entered in the terminal is:
+
+'''
+=================================
+       4x4 SUDOKU SOLVER
+=================================
+Enter 4 rows with 4 numbers each.
 Use 0 for an empty cell.
 
-Example:
-0 2 0 4
-0 0 1 0
-0 0 4 0
-2 0 0 1
+Enter row 1: 0 3 0 4
+Enter row 2: 0 1 0 2
+Enter row 3: 3 0 2 1
+Enter row 4: 1 2 4 3
+'''
 
-## Algorithm
-The solver uses backtracking:
-1. Find an empty cell.
-2. Try numbers from 1 to 4.
+### Output
+
+After entering the puzzle, the program displays:
+
+'''
+Original Sudoku:
++---+---+
+0 3 | 0 4 |
+0 1 | 0 2 |
++---+---+
+3 0 | 2 1 |
+1 2 | 4 3 |
++---+---+
+
+Solved Sudoku:
++---+---+
+2 3 | 1 4 |
+4 1 | 3 2 |
++---+---+
+3 4 | 2 1 |
+1 2 | 4 3 |
++---+---+
+'''
+
+### Terminal Commands
+
+The complete sequence of commands is:
+
+'''
+cd path/to/4x4-sudoku-solver-java
+javac src/*.java
+java -cp src Main
+'''
+
+If the terminal is already opened inside the project folder, only these two commands are needed:
+
+'''
+javac src/*.java
+java -cp src Main
+'''
+
+### Input and Output Screenshots
+
+**Input:**
+
+![Program Input](screenshots/input.png)
+
+**Output:**
+
+![Program Output](screenshots/output.png)
+
+
+
+## Features
+
+- Backtracking to solve 4x4 Sudokus.
+- Easy keyboard input for entering the Sudoku puzzle.
+- Checks rows, columns, and 2x2 boxes.
+- Displays the original and solved Sudoku.
+- Handles invalid input using exception handling.
+- Uses separate Java classes for different parts of the program.
+
+
+
+## Technologies/tools used
+
+- Java
+- Java Scanner
+- 2D Arrays
+- Recursion
+- Backtracking
+- Exception Handling
+
+
+
+## Prerequisites
+
+- Java JDK must be installed.
+- `java` and `javac` must be available in the terminal.
+- No external libraries are required.
+
+
+
+## Project Structure
+
+'''
+src/
+├── Main.java
+├── SudokuBoard.java
+├── InputHandler.java
+├── SudokuValidator.java
+├── SudokuSolver.java
+└── SudokuException.java
+
+data/
+└── sample.txt
+
+screenshots/
+├── input.png
+└── output.png
+
+README.md
+statement.md
+'''
+
+
 3. Check whether the number is safe.
 4. Place the number if valid.
 5. Recursively solve the remaining cells.
